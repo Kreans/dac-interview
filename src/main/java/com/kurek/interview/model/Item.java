@@ -1,29 +1,16 @@
 package com.kurek.interview.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import java.util.UUID;
 
 @Entity
-public class Item {
+public class Item extends BaseEntity {
 
-    @Id
-    @GeneratedValue(generator = "UUID")
-    private UUID id;
     private String name;
     private UUID auctionId;
     private String description;
     private int startAmountInCents;
     private Integer bidAmountInCents;
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

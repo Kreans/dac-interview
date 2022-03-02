@@ -2,8 +2,10 @@ package com.kurek.interview.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.util.UUID;
 
+@MappedSuperclass
 public class BaseEntity {
 
     @Id

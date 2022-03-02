@@ -4,7 +4,6 @@ package com.kurek.interview.service;
 import com.kurek.interview.dto.AuctionDto;
 import com.kurek.interview.model.Auction;
 import com.kurek.interview.repositiry.AuctionRepository;
-import com.kurek.interview.repositiry.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,9 +18,6 @@ public class AuctionService {
 
     @Autowired
     private AuctionRepository auctionRepository;
-
-    @Autowired
-    private ItemRepository itemRepository;
 
     public List<Auction> getAuctions() {
         return auctionRepository.findAll();
