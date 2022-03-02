@@ -54,7 +54,6 @@ public class ItemService {
         return itemRepository.save(item);
     }
 
-
     public Item bidItem(UUID itemId, BidRequestDto bidRequestDto) {
         final var item = getItem(itemId)
                 .orElseThrow(ItemNotFoundException::new);
